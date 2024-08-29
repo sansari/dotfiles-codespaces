@@ -1,0 +1,107 @@
+# Compiled source #
+###################
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
+# Python things
+###############
+.python-version
+.tox
+
+# Packages #
+############
+*.7z
+*.dmg
+*.gz
+*.iso
+*.rar
+*.tar
+*.war
+*.ear
+
+# Logs and databases #
+######################
+*.log
+*.sql
+##*.sqlite
+
+# Sparkle distribution Private Key #
+######################
+dsa_priv.pem
+
+# OS generated files #
+######################
+.DS_Store
+ehthumbs.db
+Icon?
+Thumbs.db
+
+# --------
+# MacOS
+# --------
+.DS_Store
+._*
+# OS or Editor files
+._*
+
+# Files that might appear on external disks
+.Spotlight-V100
+.Trashes
+*.docset
+#profile
+
+# Always-ignore extensions
+*~
+*.err
+*.log
+*.sass-cache
+# Xcode
+*.pbxuser
+*.mode1v3
+*.mode2v3
+*.perspectivev3
+*.xcuserstate
+project.xcworkspace/
+xcuserdata/
+
+
+#Eclipse
+.classpath
+.project
+.settings
+
+# Generated files
+/web-app/WEB-INF
+build/
+*.[oa]
+*.pyc
+
+# Other source repository archive directories (protects when importing)
+.hg
+.svn
+CVS
+
+# automatic backup files
+*~.nib
+*.swp
+*~
+
+#
+~*
+idea*
+private*
+*.idea
+*.private
+*.vagrant
+*(Autosaved).rtfd/
+Backup[ ]of[ ]*.pages/
+Backup[ ]of[ ]*.key/
+Backup[ ]of[ ]*.numbers/
+
+# Version managers
+
+.python-version

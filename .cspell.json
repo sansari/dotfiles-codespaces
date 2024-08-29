@@ -1,0 +1,37 @@
+{
+  "ignorePaths": [
+    "**/.git/**",
+    ".*",
+    "**/.gitleaksignore",
+    "**/project-words.txt"
+  ],
+  "language": "en",
+  "noConfigSearch": true,
+  "version": "0.2",
+  "words": [
+    "CODEOWNERS",
+    "FSRX",
+    "Korolev",
+    "Stollnitz",
+    "vimrc",
+    "TIMEFMT",
+    "TYPECHECK",
+    "Vladistan",
+    "chsh",
+    "cpaulik",
+    "codespace",
+    "codespaces",
+    "devcontainers",
+    "dcreager",
+    "gfff",
+    "gffs",
+    "gfrf",
+    "gfrs",
+    "gitx",
+    "glgg",
+    "grbo",
+    "grrm",
+    "oneline",
+    "xdist"
+  ]
+}

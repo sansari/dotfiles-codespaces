@@ -1,0 +1,75 @@
+---
+default_install_hook_types:
+  - pre-commit
+
+
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.6.0
+    hooks:
+      # General
+      - id: check-added-large-files
+      - id: check-case-conflict
+      - id: check-executables-have-shebangs
+      - id: check-merge-conflict
+      - id: check-symlinks
+      - id: check-toml
+      - id: check-xml
+      - id: check-yaml
+      - id: detect-private-key
+      - id: end-of-file-fixer
+      - id: fix-byte-order-marker
+      - id: mixed-line-ending
+      - id: trailing-whitespace
+
+      # Json
+      - id: check-json
+      - id: pretty-format-json
+        args: ['--indent', '2', '--autofix']
+
+
+  # General
+
+  - repo: https://github.com/sirosen/texthooks
+    rev: 0.6.7
+    hooks:
+      - id: fix-smartquotes
+      - id: fix-ligatures
+
+
+  - repo: https://github.com/adrienverge/yamllint
+    rev: v1.35.1
+    hooks:
+      - id: yamllint
+        args: [-c=.yamllint.yml]
+
+  - repo: https://github.com/jumanjihouse/pre-commit-hooks
+    rev: 3.0.0
+    hooks:
+      - id: script-must-have-extension
+      - id: shellcheck
+        args: [--external-sources, --format=gcc, --shell=bash]
+      - id: shfmt
+
+  - repo: https://github.com/Lucas-C/pre-commit-hooks
+    rev: v1.5.5
+    hooks:
+      - id: remove-crlf
+      - id: remove-tabs
+        exclude: .git/.*
+
+  - repo: https://github.com/zricethezav/gitleaks
+    rev: v8.18.4
+    hooks:
+      - id: gitleaks
+
+  - repo: https://github.com/editorconfig-checker/editorconfig-checker.python
+    rev: 2.7.3
+    hooks:
+      - id: editorconfig-checker
+        exclude: .git/.*
+
+  - repo: https://github.com/streetsidesoftware/cspell-cli
+    rev: v8.13.3
+    hooks:
+      - id: cspell

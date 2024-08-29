@@ -1,0 +1,38 @@
+{
+  "customizations": {
+    "codespaces": {
+      "openFiles": [
+        "README.md"
+      ]
+    },
+    "vscode": {
+      "extensions": [
+        "ms-vscode-remote.remote-containers@0.342.0",
+        "eamodio.gitlens@14.8.2",
+        "github.copilot@1.172.0",
+        "github.copilot-chat@0.13.0"
+      ],
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "zsh",
+        "terminal.integrated.profiles.linux": {
+          "zsh": {
+            "path": "/usr/bin/zsh"
+          }
+        }
+      }
+    }
+  },
+  "features": {
+    "ghcr.io/devcontainers/features/common-utils:2": {
+      "configureZshAsDefaultShell": "true"
+    },
+    "ghcr.io/nils-geistmann/devcontainers-features/zsh:0": {
+      "desiredLocale": "en_US.UTF-8",
+      "plugins": "git",
+      "setLocale": false,
+      "theme": "robbyrussell"
+    }
+  },
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu-24.04",
+  "name": "Base Ubuntu 24.04"
+}
