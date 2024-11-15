@@ -1,6 +1,6 @@
 #!/bin/sh
 
-touch ~/.vladistan.dotfiles.codespaces.v11
+touch ~/.sansari.dotfiles.codespaces.v1
 
 # Find the directory containing the install scripts
 script_dir=$(dirname "$0")
@@ -16,5 +16,5 @@ fi
 echo "Installing dotfiles"
 "${script_dir}/manage/dotfiles.sh" install
 
-echo "Changing default shell for user : ${USER}"
-sudo chsh -s /bin/zsh "${USER}"
+echo "Changing default shell"
+chsh -s /bin/zsh
