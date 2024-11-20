@@ -21,18 +21,6 @@ touch "${MARKER_FILE}"
 script_dir=$(dirname "$0")
 echo "Running install scripts from: ${script_dir}"
 
-# Backup existing .zshrc.symlink if it exists
-if [ -h "${ZSHRC_SYMLINK}" ] || [ -f "${ZSHRC_SYMLINK}" ]; then
-  echo "Backing up existing .zshrc"
-  mv "${ZSHRC_SYMLINK}" "${ZSHRC_SYMLINK}.bak"
-  echo "Backup created at ${ZSHRC_SYMLINK}.bak"
-fi
-
-# Create symlink for .zshrc.symlink
-echo "Creating symlink for .zshrc.symlink"
-ln -s "${ZSHRC_TARGET}" "${ZSHRC_SYMLINK}"
-echo "Symlink created: ${ZSHRC_SYMLINK} -> ${ZSHRC_TARGET}"
-
 # Ensure Oh My Zsh is installed
 if [ -d "${OH_MY_ZSH_DIR}" ]; then
   echo "Oh My Zsh is already installed at ${OH_MY_ZSH_DIR}. Skipping installation."
@@ -70,6 +58,6 @@ chown root:root "${ZSHRC_SYMLINK}"
 mkdir -p "$HOME/zsh/themes"
 
 # Copy custom theme
-cp "$DOTFILES/themes/robbyrussell.zsh-theme" "$HOME/zsh/themes/"
+cp "${script_dir}/themes/robbyrussell.zsh-theme" "$HOME/zsh/themes/"
 
 echo "Installation complete. Please restart your terminal."
