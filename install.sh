@@ -66,4 +66,10 @@ echo "Ensuring ownership of .oh-my-zsh and .zshrc remains with root"
 chown -R root:root "${OH_MY_ZSH_DIR}"
 chown root:root "${ZSHRC_SYMLINK}"
 
+# Create Oh My Zsh custom themes directory if it doesn't exist
+mkdir -p "$HOME/zsh/themes"
+
+# Copy custom theme
+cp "$DOTFILES/themes/robbyrussell.zsh-theme" "$HOME/zsh/themes/"
+
 echo "Installation complete. Please restart your terminal."
