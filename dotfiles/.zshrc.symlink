@@ -10,6 +10,7 @@ ENABLE_CORRECTION="true"
 COMPLETION_WAITING_DOTS="true"
 SOLARIZED_THEME=light
 GITFAST_USE_OHMYZSH_PROMPT=1
+OVERCOMMIT_DISABLE=1
 
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
